@@ -30,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${BYekan.className} h-full antialiased`}>
 			<body className="min-h-full flex flex-col justify-start items-center bg-[#060708]">
-				<div className="max-w-78">{children}</div>
+				<div className="w-full p-2">{children}</div>
 			</body>
 		</html>
 	);
