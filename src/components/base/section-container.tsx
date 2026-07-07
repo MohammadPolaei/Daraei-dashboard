@@ -5,7 +5,7 @@ export default function SectionContainer({
 	extraClass,
 }: {
 	children: ReactNode;
-	extraClass: string;
+	extraClass?: string;
 }) {
 	return (
 		<section

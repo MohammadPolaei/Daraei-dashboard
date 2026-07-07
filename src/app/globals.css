@@ -3,3 +3,52 @@
 body {
 	background: #060708;
 }
+
+@keyframes bubbleFloat {
+	0% {
+		transform: translate3d(0px, 0px, 0) scale(1);
+	}
+
+	20% {
+		transform: translate3d(3px, -5px, 0) scale(1.03);
+	}
+
+	40% {
+		transform: translate3d(-4px, -2px, 0) scale(1.05);
+	}
+
+	60% {
+		transform: translate3d(5px, 3px, 0) scale(1.02);
+	}
+
+	80% {
+		transform: translate3d(-2px, 5px, 0) scale(0.98);
+	}
+
+	100% {
+		transform: translate3d(0px, 0px, 0) scale(1);
+	}
+}
+
+.bubble-float {
+	animation: bubbleFloat 8s ease-in-out infinite;
+	will-change: transform;
+}
+
+@keyframes bubblePulse {
+	0%,
+	92%,
+	100% {
+		transform: scale(1);
+	}
+
+	95% {
+		transform: scale(1.01);
+	}
+}
+
+.animate-bubblePulse {
+	transform-origin: center;
+	animation: bubblePulse 1s ease-in-out infinite;
+	will-change: transform;
+}

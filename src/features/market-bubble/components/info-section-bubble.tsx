@@ -17,10 +17,12 @@ export default function InfoSectionBubble({ data }: { data: MarketData }) {
 					"/"
 				)}٪`}
 			</span>
-			<img
-				draggable={false}
-				src={data.symbol == "gold" ? goldBubble.src : silverBubble.src}
-			/>
+			<div className="inline-block animate-bubblePulse">
+				<img
+					draggable={false}
+					src={data.symbol == "gold" ? goldBubble.src : silverBubble.src}
+				/>
+			</div>
 			<p className="text-white text-[10px]">فاصله از ارزش ذاتی</p>
 			<div className="absolute left-0 w-full">
 				{data.symbol == "gold" ? (
