@@ -24,7 +24,7 @@ export default function InfoSectionBubble({ data }: { data: MarketData }) {
 				/>
 			</div>
 			<p className="text-white text-[10px]">فاصله از ارزش ذاتی</p>
-			<div className="absolute left-0 w-full">
+			<div className="absolute left-0 top-[-17] w-full">
 				{data.symbol == "gold" ? (
 					<VerticalIndicator value={data.value} />
 				) : (

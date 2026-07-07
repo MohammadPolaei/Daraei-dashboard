@@ -8,12 +8,12 @@ const silverData: MarketData = { symbol: "silver", value: -5.8 };
 
 export default function MarketBubble() {
 	return (
-		<section className="w-full flex justify-between items-center gap-3 max-w-85.75">
-			<SectionContainer extraClass="flex-1 w-42">
+		<section className="w-full flex justify-between items-center gap-3 max-w-87.75">
+			<SectionContainer extraClass="flex-1 w-43">
 				<CustomH2 text="حباب طلا" />
 				<InfoSectionBubble data={goldData} />
 			</SectionContainer>
-			<SectionContainer extraClass="flex-1 w-42">
+			<SectionContainer extraClass="flex-1 w-43">
 				<CustomH2 text="حباب نقره" />
 				<InfoSectionBubble data={silverData} />
 			</SectionContainer>
