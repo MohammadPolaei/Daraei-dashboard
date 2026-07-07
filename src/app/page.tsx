@@ -3,7 +3,7 @@ import ShekafSekke from "@/features/shekaf-sekke/components/shekaf-sekke";
 
 export default function Home() {
 	return (
-		<main className="">
+		<main className="flex flex-col justify-start items-center gap-5">
 			<ShekafSekke />
 			<GoldSilverChoose />
 		</main>
