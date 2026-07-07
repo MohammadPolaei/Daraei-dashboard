@@ -1,14 +1,18 @@
 import ShieldBackground from "@/assets/choose/ShieldBackground";
+import CustomH2 from "@/components/base/custom-h2";
 import SectionContainer from "@/components/base/section-container";
+import { faNumber } from "@/utils/convert-number-into-persian";
 
 export default function GoldSilverChoose() {
 	return (
-		<SectionContainer>
-			<h2 className="w-full text-right">انتخاب طلا یا نقره</h2>
+		<SectionContainer extraClass="min-w-full">
+			<CustomH2 text="انتخاب طلا یا نقره" />
 			<div className="flex justify-center items-center gap-5">
 				<div className="w-full flex flex-col justify-center items-center gap-1">
 					<span className="text-[#D1810F] text-[15px] font-semibold">طلا</span>
-					<span className="text-white text-[15px] font-semibold">66%</span>
+					<span className="text-white text-[15px] font-semibold">{`${faNumber(
+						66
+					)}٪`}</span>
 					<span className="text-[#898989] text-[12px]">امتیاز جذابیت</span>
 				</div>
 				<div>
@@ -31,7 +35,9 @@ export default function GoldSilverChoose() {
 				</div>
 				<div className="w-full flex flex-col justify-center items-center gap-1">
 					<span className="text-[#B0B0B0] text-[15px] font-semibold">نقره</span>
-					<span className="text-white text-[15px] font-semibold">34%</span>
+					<span className="text-white text-[15px] font-semibold">{`${faNumber(
+						34
+					)}٪`}</span>
 					<span className="text-[#898989] text-[12px]">امتیاز جذابیت</span>
 				</div>
 			</div>
