@@ -3,7 +3,7 @@ import SectionContainer from "@/components/base/section-container";
 import { MarketData } from "../types/data";
 import InfoSectionBubble from "./info-section-bubble";
 
-const goldData: MarketData = { symbol: "gold", value: 5 };
+const goldData: MarketData = { symbol: "gold", value: 9 };
 const silverData: MarketData = { symbol: "silver", value: -5.8 };
 
 export default function MarketBubble() {
