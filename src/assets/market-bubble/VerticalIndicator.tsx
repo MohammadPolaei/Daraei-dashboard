@@ -242,34 +242,13 @@ export const VerticalIndicator: React.FC<VerticalIndicatorProps> = ({
 			</g>
 
 			{/* برچسب‌های درصد */}
-			<text
-				x="19"
-				y="17"
-				fill="#B8B8B8"
-				fontSize="10"
-				fontWeight="600"
-				fontFamily="IRANSansX, sans-serif"
-			>
+			<text x="19" y="17" fill="#B8B8B8" fontSize="10" fontWeight="400">
 				+۱۰%
 			</text>
-			<text
-				x="19"
-				y="84"
-				fill="#FFFFFF"
-				fontSize="10"
-				fontWeight="700"
-				fontFamily="IRANSansX, sans-serif"
-			>
+			<text x="19" y="84" fill="#FFFFFF" fontSize="10" fontWeight="400">
 				۰%
 			</text>
-			<text
-				x="19"
-				y="156"
-				fill="#B8B8B8"
-				fontSize="10"
-				fontWeight="600"
-				fontFamily="IRANSansX, sans-serif"
-			>
+			<text x="19" y="156" fill="#B8B8B8" fontSize="10" fontWeight="400">
 				-۱۰%
 			</text>
 

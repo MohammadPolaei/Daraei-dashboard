@@ -9,11 +9,11 @@ export default function GoldSilverChoose() {
 			<CustomH2 text="انتخاب طلا یا نقره" />
 			<div className="flex justify-center items-center gap-5">
 				<div className="w-full flex flex-col justify-center items-center gap-1">
-					<span className="text-[#D1810F] text-[15px] font-semibold">طلا</span>
-					<span className="text-white text-[15px] font-semibold">{`${faNumber(
+					<span className="text-[#D1810F] text-[15px] font-normal">طلا</span>
+					<span className="text-white text-[15px] font-normal">{`${faNumber(
 						66
 					)}٪`}</span>
-					<span className="text-[#898989] text-[12px]">امتیاز جذابیت</span>
+					<span className="text-[#898989] text-[11px]">امتیاز جذابیت</span>
 				</div>
 				<div>
 					{" "}
@@ -34,11 +34,11 @@ export default function GoldSilverChoose() {
 					</div>
 				</div>
 				<div className="w-full flex flex-col justify-center items-center gap-1">
-					<span className="text-[#B0B0B0] text-[15px] font-semibold">نقره</span>
-					<span className="text-white text-[15px] font-semibold">{`${faNumber(
+					<span className="text-[#B0B0B0] text-[15px] font-normal">نقره</span>
+					<span className="text-white text-[15px] font-normal">{`${faNumber(
 						34
 					)}٪`}</span>
-					<span className="text-[#898989] text-[12px]">امتیاز جذابیت</span>
+					<span className="text-[#898989] text-[11px]">امتیاز جذابیت</span>
 				</div>
 			</div>
 		</SectionContainer>
