@@ -20,10 +20,10 @@ export default function GoldSilverChoose() {
 					<div className="relative w-23 h-26.5">
 						<ShieldBackground />
 
-						<div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-							<span className="text-[8px] text-gray-300">پیشنهاد امروز</span>
+						<div className="absolute top-[-10] right-0 left-0 bottom-0 flex flex-col items-center justify-center text-center gap-0.75">
+							<span className="text-[8px] text-gray-400">پیشنهاد امروز</span>
 
-							<span className="text-[#F59E0B] text-xl font-bold leading-none my-0">
+							<span className="text-[#F59E0B] text-[14px] font-semibold leading-none my-0">
 								طلا
 							</span>
 

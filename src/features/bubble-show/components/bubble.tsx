@@ -44,9 +44,15 @@ export default function Bubble({
 
 				<div className="flex items-center justify-center gap-1 mt-2">
 					<div
-						className={`w-2 h-2 rounded-full ${
+						className={`w-1 h-1 rounded-full animate-pulse-shadow ${
 							change > 0 ? "bg-[#53FF45]" : "bg-[#ff4545]"
 						}`}
+						style={{
+							boxShadow:
+								change > 0
+									? "0 0 6px 2px rgba(83, 255, 69, 0.3)"
+									: "0 0 6px 2px rgba(255, 69, 69, 0.3)",
+						}}
 					/>
 					<span
 						className={`text-[10px] font-light ${

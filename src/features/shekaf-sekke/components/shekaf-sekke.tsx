@@ -11,9 +11,9 @@ export default function ShekafSekke() {
 				<div className="w-50">
 					<GoldGauge abshodeh={50} neutral={0} robSekeh={150} />
 				</div>
-				<div className="h-full flex flex-col justify-between items-end gap-10">
+				<div className="h-full flex flex-col justify-between items-end gap-13">
 					<CustomH2 text="شکاف ربع سکه" />
-					<div className="text-[8px] text-center p-2 rounded-[7px] border border-[#E6B745]/50 bg-radial from-[#E6B745]/25 to-transparent text-shadow-2xs text-shadow-[#E6B745]/10 font-normal">
+					<div className="text-[8px] text-center p-1.5 rounded-[7px] border border-[#E6B745]/50 bg-radial from-[#E6B745]/25 to-transparent text-shadow-2xs text-shadow-[#E6B745]/10 font-normal">
 						{shekafData.robSekke > shekafData.abshodeh
 							? "خرید ربع سکه به صرفه تر است"
 							: "خرید طلا به صرفه تر است"}

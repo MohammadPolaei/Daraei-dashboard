@@ -87,3 +87,19 @@ body {
 	animation: bubblePulse 1s ease-in-out infinite;
 	will-change: transform;
 }
+
+/* bubble show price */
+
+@keyframes pulseShadow {
+	0%,
+	100% {
+		box-shadow: 0 0 0 0 rgba(83, 255, 69, 0.4); /* رنگ سبز با شفافیت کم */
+	}
+	50% {
+		box-shadow: 0 0 4px 4px rgba(83, 255, 69, 0.3); /* گسترش سایه */
+	}
+}
+
+.animate-pulse-shadow {
+	animation: pulseShadow 1s infinite ease-in-out;
+}

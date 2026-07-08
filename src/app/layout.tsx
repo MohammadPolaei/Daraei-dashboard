@@ -5,12 +5,12 @@ import "./globals.css";
 const BYekan = localFont({
 	src: [
 		{
-			path: "../../public/fonts/BYekan+.ttf",
+			path: "../../public/fonts/IRANYekanX-Regular.ttf",
 			weight: "400",
 			style: "normal",
 		},
 		{
-			path: "../../public/fonts/BYekan+ Bold.ttf",
+			path: "../../public/fonts/IRANYekanX-Bold.ttf",
 			weight: "700",
 			style: "normal",
 		},
