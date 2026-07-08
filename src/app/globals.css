@@ -10,19 +10,19 @@ body {
 	}
 
 	20% {
-		transform: translate3d(3px, -5px, 0) scale(1.03);
+		transform: translate3d(1px, -3px, 0) rotate(-1deg) scaleX(0.98) scaleY(1.05);
 	}
 
 	40% {
-		transform: translate3d(-4px, -2px, 0) scale(1.05);
+		transform: translate3d(-2px, -1px, 0) scale(1.05);
 	}
 
 	60% {
-		transform: translate3d(5px, 3px, 0) scale(1.02);
+		transform: translate3d(4px, 2px, 0) scale(1.02);
 	}
 
 	80% {
-		transform: translate3d(-2px, 5px, 0) scale(0.98);
+		transform: translate3d(-2px, 4px, 0) rotate(1deg) scaleX(0.97) scaleY(1.06);
 	}
 
 	100% {
@@ -31,8 +31,43 @@ body {
 }
 
 .bubble-float {
-	animation: bubbleFloat 8s ease-in-out infinite;
+	animation: bubbleFloat 15s ease-in-out infinite;
 	will-change: transform;
+}
+/* اضافه کردن به فایل CSS موجود */
+
+@keyframes bubbleBurst {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+}
+
+@keyframes textFadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.bubble-burst-active {
+	animation: bubbleBurst 0.6s ease-out forwards;
+	will-change: transform, opacity;
+}
+
+.bubble-text-fade-active {
+	animation: textFadeOut 0.4s ease-out forwards;
+	will-change: opacity;
 }
 
 @keyframes bubblePulse {

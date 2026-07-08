@@ -15,7 +15,7 @@ export default function BubbleShow() {
 				change={26.78}
 				title="حباب نیم سکه"
 				size={130}
-				className="top-15 left-20"
+				className="top-15 left-22"
 				delay={1.7}
 			/>
 			<Bubble

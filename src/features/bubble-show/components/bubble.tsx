@@ -30,16 +30,16 @@ export default function Bubble({
         justify-center
         items-center
         text-center
-        bubble-float
+        ${change <= 0 ? "bubble-burst-active" : "bubble-float"}
         ${className}
       `}
 			style={{
 				width: size,
 				height: size,
-				animationDelay: `${delay}s`,
+				animationDelay: change <= 0 ? "0s" : `${delay}s`,
 			}}
 		>
-			<div>
+			<div className={change <= 0 ? "bubble-text-fade-active" : ""}>
 				<span className="text-[12px] font-medium">{title}</span>
 
 				<div className="flex items-center justify-center gap-1 mt-2">
@@ -48,7 +48,6 @@ export default function Bubble({
 							change > 0 ? "bg-[#53FF45]" : "bg-[#ff4545]"
 						}`}
 					/>
-
 					<span
 						className={`text-[10px] font-light ${
 							change > 0 ? "text-[#53FF45]" : "text-[#ff4545]"
