@@ -24,7 +24,7 @@ export default function Bubble({
         bg-radial
         via-transparent
         from-transparent
-        to-gray-300/40
+        to-gray-300/30
         backdrop-blur-md
         flex flex-col
         justify-center
