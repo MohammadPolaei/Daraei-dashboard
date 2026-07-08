@@ -1,8 +1,8 @@
 import goldBubble from "@/assets/market-bubble/gold.svg";
 import silverBubble from "@/assets/market-bubble/silver.svg";
 
+import { VerticalIndicatorSilver } from "@/assets/market-bubble/silver-indicator";
 import { VerticalIndicator } from "@/assets/market-bubble/VerticalIndicator";
-import { VerticalIndicatorSilver } from "@/assets/market-bubble/VerticalIndicatorSilver";
 import { faNumber } from "@/utils/convert-number-into-persian";
 import { MarketData } from "../types/data";
 export default function InfoSectionBubble({ data }: { data: MarketData }) {
