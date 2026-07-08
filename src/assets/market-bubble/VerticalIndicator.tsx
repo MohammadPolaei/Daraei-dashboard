@@ -222,10 +222,7 @@ export const VerticalIndicator: React.FC<VerticalIndicatorProps> = ({
 				)}
 
 				{/* ۲. بدنه دایره اصلی نشانگر */}
-				<path
-					d="M6.29272 44.7981C6.29272 43.9505 5.72734 43.2277 5.05496 42.7116C3.98351 41.8892 3.29272 40.5958 3.29272 39.1407C3.29272 36.6554 5.30744 34.6407 7.79272 34.6407C10.278 34.6407 12.2927 36.6554 12.2927 39.1407C12.2927 40.5958 11.6019 41.8892 10.5305 42.7116C9.85811 43.2277 9.29272 43.9505 9.29272 44.7981L9.29272 46.0000C9.29272 46.8284 8.62115 47.5000 7.79272 47.5000C6.9643 47.5000 6.29272 46.8284 6.29272 46.0000L6.29272 44.7981Z"
-					fill="#CA9131"
-				/>
+				<circle cx="7.79272" cy="39.1407" r="4.5" fill="url(#goldCircle)" />
 
 				{/* ۳. افکت نوری Glow دایره */}
 				<g filter="url(#filter0_f_2_601)">
@@ -288,6 +285,18 @@ export const VerticalIndicator: React.FC<VerticalIndicatorProps> = ({
 				>
 					<stop stopColor="#CA9131" stopOpacity="1" />
 					<stop offset="1" stopColor="#CA9131" stopOpacity="0.1" />
+				</linearGradient>
+				<linearGradient
+					id="goldCircle"
+					x1="7.79272"
+					y1="34.6407"
+					x2="7.79272"
+					y2="43.6407"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset="0%" stopColor="#CA9131" />
+					<stop offset="50%" stopColor="#CA9131" />
+					<stop offset="100%" stopColor="#CA9131" />
 				</linearGradient>
 			</defs>
 		</svg>

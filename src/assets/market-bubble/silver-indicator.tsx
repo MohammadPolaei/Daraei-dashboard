@@ -47,9 +47,9 @@ export const VerticalIndicatorSilver: React.FC<VerticalIndicatorProps> = ({
 
 	return (
 		<svg
-			width="16"
+			width="60"
 			height="162"
-			viewBox="0 0 16 162"
+			viewBox="0 0 60 162"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			className={className}
@@ -217,15 +217,12 @@ export const VerticalIndicatorSilver: React.FC<VerticalIndicatorProps> = ({
 										39.1407 + tailLength
 								  } L6.29272 ${39.1407 + tailLength} Z`
 						}
-						fill="url(#paint0_linear_2_601)"
+						fill="url(#paint0_linear_silver)"
 					/>
 				)}
 
 				{/* ۲. بدنه دایره اصلی نشانگر */}
-				<path
-					d="M6.29272 44.7981C6.29272 43.9505 5.72734 43.2277 5.05496 42.7116C3.98351 41.8892 3.29272 40.5958 3.29272 39.1407C3.29272 36.6554 5.30744 34.6407 7.79272 34.6407C10.278 34.6407 12.2927 36.6554 12.2927 39.1407C12.2927 40.5958 11.6019 41.8892 10.5305 42.7116C9.85811 43.2277 9.29272 43.9505 9.29272 44.7981L9.29272 46.0000C9.29272 46.8284 8.62115 47.5000 7.79272 47.5000C6.9643 47.5000 6.29272 46.8284 6.29272 46.0000L6.29272 44.7981Z"
-					fill="url(#silverCircle)"
-				/>
+				<circle cx="7.79272" cy="39.1407" r="4.5" fill="url(#silverCircle)" />
 
 				{/* ۳. افکت نوری Glow دایره */}
 				<g filter="url(#filter0_f_2_601)">
@@ -236,10 +233,21 @@ export const VerticalIndicatorSilver: React.FC<VerticalIndicatorProps> = ({
 						height="5"
 						rx="2.5"
 						transform="rotate(180 10.3728 41.6407)"
-						fill="#F5F5F5"
+						fill="white"
 					/>
 				</g>
 			</g>
+
+			{/* برچسب‌های درصد */}
+			<text x="19" y="17" fill="#B8B8B8" fontSize="10" fontWeight="400">
+				+۱۰%
+			</text>
+			<text x="19" y="84" fill="#FFFFFF" fontSize="10" fontWeight="400">
+				۰%
+			</text>
+			<text x="19" y="156" fill="#B8B8B8" fontSize="10" fontWeight="400">
+				-۱۰%
+			</text>
 
 			<defs>
 				<filter
@@ -265,7 +273,7 @@ export const VerticalIndicatorSilver: React.FC<VerticalIndicatorProps> = ({
 				</filter>
 
 				<linearGradient
-					id="paint0_linear_2_601"
+					id="paint0_linear_silver"
 					x1="7.79272"
 					y1="39.1407"
 					x2="7.79272"
@@ -274,22 +282,21 @@ export const VerticalIndicatorSilver: React.FC<VerticalIndicatorProps> = ({
 					}
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0%" stopColor="#F4F4F4" stopOpacity="1" />
-					<stop offset="45%" stopColor="#D5D5D5" stopOpacity="0.9" />
-					<stop offset="100%" stopColor="#8B8B8B" stopOpacity="0.1" />
+					<stop stopColor="#848282" stopOpacity="1" />
+					<stop offset="1" stopColor="#848282" stopOpacity="0.1" />
 				</linearGradient>
+
 				<linearGradient
 					id="silverCircle"
 					x1="7.79272"
 					y1="34.6407"
 					x2="7.79272"
-					y2="47.5"
+					y2="43.6407"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0%" stopColor="#FAFAFA" />
-					<stop offset="30%" stopColor="#E6E6E6" />
-					<stop offset="65%" stopColor="#BDBDBD" />
-					<stop offset="100%" stopColor="#8A8A8A" />
+					<stop offset="0%" stopColor="#F5F5F5" />
+					<stop offset="50%" stopColor="#CFCFCF" />
+					<stop offset="100%" stopColor="#8C8C8C" />
 				</linearGradient>
 			</defs>
 		</svg>
