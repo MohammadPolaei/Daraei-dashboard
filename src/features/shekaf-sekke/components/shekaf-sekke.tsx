@@ -2,14 +2,18 @@ import CustomH2 from "@/components/base/custom-h2";
 import SectionContainer from "@/components/base/section-container";
 import GoldGauge from "@/features/shekaf-sekke/components/gold-gauge";
 
-const shekafData = { abshodeh: 50, neutral: 0, robSekke: 150 };
+const shekafData = { abshodeh: 0, neutral: 0, robSekke: 0 };
 
 export default function ShekafSekke() {
 	return (
 		<SectionContainer extraClass="w-full">
 			<div className="flex flex-row justify-between items-center h-full">
 				<div className="w-50">
-					<GoldGauge abshodeh={50} neutral={0} robSekeh={150} />
+					<GoldGauge
+						abshodeh={shekafData.abshodeh}
+						neutral={shekafData.neutral}
+						robSekeh={shekafData.robSekke}
+					/>
 				</div>
 				<div className="h-full flex flex-col justify-between items-end gap-10">
 					<CustomH2 text="شکاف ربع سکه" />
