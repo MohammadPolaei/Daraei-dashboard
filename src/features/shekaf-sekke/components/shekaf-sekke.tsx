@@ -2,7 +2,7 @@ import CustomH2 from "@/components/base/custom-h2";
 import SectionContainer from "@/components/base/section-container";
 import GoldGauge from "@/features/shekaf-sekke/components/gold-gauge";
 
-const shekafData = { abshodeh: 5, neutral: 0, robSekke: 3 };
+const shekafData = { abshodeh: 4, neutral: 0, robSekke: 3 };
 
 export default function ShekafSekke() {
 	return (

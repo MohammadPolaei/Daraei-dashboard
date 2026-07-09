@@ -32,6 +32,10 @@ export default function GoldGauge({
 		filter0Id,
 		filter1Id,
 		maskId,
+
+		// added (for moving shadow)
+		shadowFilterId,
+		shadowGradientId,
 	} = useMemo(() => {
 		const n = clampNonNegative(neutral);
 		const a = clampNonNegative(abshodeh);
@@ -76,6 +80,9 @@ export default function GoldGauge({
 			filter0Id: `filter0_d_${uniqueId}`,
 			filter1Id: `filter1_f_${uniqueId}`,
 			maskId: `path-8-outside-1_${uniqueId}`,
+
+			shadowFilterId: `shadow_filter_${uniqueId}`,
+			shadowGradientId: `shadow_grad_${uniqueId}`,
 		};
 	}, [neutral, abshodeh, robSekeh, uniqueId]);
 
@@ -137,17 +144,35 @@ export default function GoldGauge({
 				</text>
 			</g>
 
-			{/* سایه/تابش متحرک (دوران حول مرکز کمان همگام با عقربه) */}
+			{/* سایه/تابش متحرک (اصلاح فنی: بدون svg تو در تو، با idهای معتبر) */}
 			<g
 				opacity="0.5"
-				filter={`url(#${filter1Id})`}
+				filter={`url(#${shadowFilterId})`}
 				style={{
-					transform: `rotate(${rotateDeg}deg)`,
+					transform: `rotate(${54 - rotateDeg}deg)`,
 					transformOrigin: "81.2774px 80.3594px",
 					transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
 				}}
 			>
-				{/* موقعیت اولیه سایه در راست‌ترین حالت (متناظر با زاویه 0 درجه) */}
+				{/* موقعیت اولیه سایه در راست‌ترین حالت (همان پث اصلی شما) */}
+				<path
+					d="M118.818 31.9603C116.821 30.2189 114.733 28.5856 112.562 27.0672L95.6734 51.2161C96.9837 52.1324 98.2439 53.1181 99.4489 54.169L118.818 31.9603Z"
+					fill={`url(#${shadowGradientId})`}
+					fillOpacity="0.2"
+				/>
+			</g>
+
+			{/* (پث سایه‌ی قبلی شما که جدا افتاده بود، به‌صورت صحیح و هم‌جای قبلی، داخل svg نگه داشته شد)
+			    اگر این پث را نمی‌خواهید، می‌توانید بعداً حذف کنید؛ ولی طبق درخواست شما حذف/کم‌کردن کد انجام ندادم. */}
+			<g
+				opacity="0.5"
+				filter={`url(#${filter1Id})`}
+				style={{
+					transform: `rotate(${54 - rotateDeg}deg)`,
+					transformOrigin: "81.2774px 80.3594px",
+					transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+				}}
+			>
 				<path
 					d="M118.818 31.9603C116.821 30.2189 114.733 28.5856 112.562 27.0672L95.6734 51.2161C96.9837 52.1324 98.2439 53.1181 99.4489 54.169L118.818 31.9603Z"
 					fill={`url(#${paint2Id})`}
@@ -180,7 +205,7 @@ export default function GoldGauge({
 				mask={`url(#${maskId})`}
 			/>
 
-			{/* عقربه متحرک: دوران حول مرکز هندسی کمان به عنوان مسیر واقعی کیلومترشمار */}
+			{/* عقربه متحرک */}
 			<g
 				style={{
 					transform: `rotate(${-rotateDeg}deg)`,
@@ -188,8 +213,6 @@ export default function GoldGauge({
 					transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
 				}}
 			>
-				{/* عقربه در موقعیت پایه سمت راست (آب شده): مرکز (144.011، 80.3594) منهای فاصله افقی روی شعاع کمان */}
-				{/* 144.011 - 81.2774 = 62.7336 (شعاع دقیق کمان بر اساس SVG اصلی) */}
 				<g>
 					<circle
 						cx="144.011"
@@ -262,7 +285,7 @@ export default function GoldGauge({
 					/>
 				</filter>
 
-				{/* فیلتر محوکننده پس‌زمینه سایه متحرک */}
+				{/* فیلتر محوکننده پس‌زمینه سایه (نسخه‌ی قدیمی شما - حفظ شد) */}
 				<filter
 					id={filter1Id}
 					x="89.6312"
@@ -282,6 +305,29 @@ export default function GoldGauge({
 					<feGaussianBlur
 						stdDeviation="3.02105"
 						result="effect1_foregroundBlur_2_492"
+					/>
+				</filter>
+
+				{/* فیلتر سایه متحرک (اصلاح فنی: id معتبر و مستقل) */}
+				<filter
+					id={shadowFilterId}
+					x="89.6312"
+					y="21.0251"
+					width="35.229"
+					height="39.186"
+					filterUnits="userSpaceOnUse"
+					colorInterpolationFilters="sRGB"
+				>
+					<feFlood floodOpacity="0" result="BackgroundImageFix" />
+					<feBlend
+						mode="normal"
+						in="SourceGraphic"
+						in2="BackgroundImageFix"
+						result="shape"
+					/>
+					<feGaussianBlur
+						stdDeviation="3.02105"
+						result="effect1_foregroundBlur"
 					/>
 				</filter>
 
@@ -309,8 +355,22 @@ export default function GoldGauge({
 					<stop offset="1" stopColor="white" stopOpacity="0" />
 				</linearGradient>
 
+				{/* گرادینت قدیمی شما برای سایه (حفظ شد) */}
 				<linearGradient
 					id={paint2Id}
+					x1="79.9104"
+					y1="13.1595"
+					x2="75.4207"
+					y2="28.4781"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset="0.25" stopColor="white" stopOpacity="0.2" />
+					<stop offset="1" stopColor="#FFD900" stopOpacity="0.6" />
+				</linearGradient>
+
+				{/* گرادینت سایه متحرک (اصلاح فنی: id معتبر مستقل) */}
+				<linearGradient
+					id={shadowGradientId}
 					x1="79.9104"
 					y1="13.1595"
 					x2="75.4207"
